@@ -1,4 +1,5 @@
 import { FadeUp } from './FadeUp';
+import saulePortrait from '@/assets/saule-portrait.png';
 
 export function HeroSection() {
   return (
@@ -41,11 +42,11 @@ export function HeroSection() {
         </FadeUp>
 
         <FadeUp className="md:w-1/2 relative" delay={0.2}>
-          <div className="relative z-10 rounded-t-full overflow-hidden shadow-2xl border-4 border-card h-[600px] w-full max-w-md mx-auto">
+          <div className="relative z-10 rounded-t-full overflow-hidden shadow-2xl border-4 border-card h-[600px] w-full max-w-md mx-auto bg-beige-100">
             <img
-              src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              className="w-full h-full object-cover"
-              alt="Saule Mood"
+              src={saulePortrait}
+              className="w-full h-full object-cover object-top"
+              alt="Saule Sherniyaz"
             />
 
             {/* Floating Badge */}

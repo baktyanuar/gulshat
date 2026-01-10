@@ -22,8 +22,11 @@ const cards = [
   {
     icon: <span className="text-sage"><SpaIcon /></span>,
     title: 'Мягкая Сила',
-    description:
-      'Психология, Коучинг FIA, Эзотерика. Она дает не только инструменты заработка, но и состояние, из которого эти деньги приходят легко.',
+    description: (
+      <>
+        <strong>Психология, коучинг FIA, игропрактика и эзотерика</strong> объединены в единую, цельную систему. Сауле Шернияз работает не через давление, а через <strong>состояние</strong>, в котором изменения происходят естественно и без внутреннего сопротивления. Игра <strong>«Денежный магнит»</strong> в её подходе — не развлечение, а инструмент глубинной работы с мышлением, установками и отношением к деньгам.
+      </>
+    ),
   },
   {
     icon: <Eye className="w-6 h-6 text-beige-900" />,
@@ -56,9 +59,9 @@ export function VisionSection() {
                   {card.icon}
                 </div>
                 <h3 className="font-serif text-2xl mb-3 text-beige-900">{card.title}</h3>
-                <p className="font-sans font-light text-sm text-muted-foreground leading-relaxed">
+                <div className="font-sans font-light text-sm text-muted-foreground leading-relaxed">
                   {card.description}
-                </p>
+                </div>
               </div>
             </FadeUp>
           ))}

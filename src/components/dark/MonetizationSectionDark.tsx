@@ -1,93 +1,114 @@
 import { FadeUp } from '../FadeUp';
+import { Check } from 'lucide-react';
+
+const timeline = [
+  'Придумать идею (для тех, у кого её нет)',
+  'Выбрать нишу и определить аудиторию',
+  'Создать продуктовую линейку',
+  'Запустить первые продажи',
+];
 
 const products = [
   {
     tier: 'Low Ticket',
-    tierColor: 'text-amber-100/40',
     title: 'Гайды по Эстетике',
     description: 'Фэншуй дома, сервировка, расхламление. Легкий вход в воронку.',
+    price: 'от 5 000 ₸',
   },
   {
     tier: 'Main Product',
-    tierColor: 'text-amber-400',
     title: 'Курс / Мастер-группа',
     description: 'Мышление, деньги, состояние.',
+    price: 'от 50 000 ₸',
+    highlighted: true,
   },
   {
     tier: 'VIP',
-    tierColor: 'text-white',
     title: 'Индивидуальное сопровождение',
-    description: 'Для женщин, которым важен личный контакт, глубина и живое поле. Про мышление, жизненные решения, деньги и внутреннюю устойчивость. Не обучение, точечная личная консультационная работа.',
+    description: 'Личный контакт, глубина и живое поле. Точечная консультационная работа.',
+    price: 'от 300 000 ₸',
   },
   {
     tier: 'Offline',
-    tierColor: 'text-emerald-400',
     title: 'Женские Встречи',
-    description: 'Бранчи, камерные встречи, трансформационные игры, живое поле Сауле.',
+    description: 'Бранчи, камерные встречи, трансформационные игры.',
+    price: 'по запросу',
   },
 ];
 
 export function MonetizationSectionDark() {
   return (
-    <section id="monetization" className="py-28 bg-[#080808] relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/5 rounded-full blur-[200px]"></div>
-      
+    <section id="monetization" className="py-24 bg-[#0a0a0a] relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-20 items-start">
-          <FadeUp className="lg:w-1/3 lg:sticky lg:top-32">
-            <div className="inline-flex items-center gap-3 mb-6">
-              <div className="w-12 h-px bg-gradient-to-r from-amber-500 to-transparent"></div>
-              <span className="text-amber-500 font-sans text-xs tracking-[0.3em] uppercase">
-                Монетизация
-              </span>
-            </div>
-            <h2 className="font-serif text-4xl md:text-5xl text-white mb-8">Продуктовая Линейка</h2>
-            <p className="font-sans font-light text-amber-100/50 mb-10 leading-relaxed">
-              Бренд строится не только ради лайков. Это бизнес-система. Мы продаем не воздух, а
-              трансформацию.
-            </p>
+        <FadeUp className="text-center mb-16">
+          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
+            Что вы успеете за <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500 underline decoration-amber-500/50 decoration-wavy underline-offset-8">2 недели</span> после покупки
+          </h2>
+          <p className="text-white/50 text-lg mt-6">если изучите материалы интенсива</p>
+        </FadeUp>
+
+        {/* Timeline */}
+        <FadeUp className="mb-24">
+          <div className="max-w-2xl mx-auto">
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500/50 to-amber-600/50 blur"></div>
-              <div className="relative bg-[#0a0a0a] p-6 border-l-2 border-amber-500">
-                <p className="font-serif italic text-xl text-amber-100/90">
-                  «Люди платят большие деньги за состояние, рядом с которым они растут.»
-                </p>
+              {/* Line */}
+              <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-amber-500 via-amber-500/50 to-transparent"></div>
+              
+              <div className="space-y-6">
+                {timeline.map((item, index) => (
+                  <div key={index} className="flex items-start gap-6 pl-0">
+                    <div className="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center flex-shrink-0 relative z-10">
+                      <Check className="w-5 h-5 text-amber-400" />
+                    </div>
+                    <div className="pt-3">
+                      <p className="text-white/80 text-lg">{item}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </FadeUp>
+          </div>
+        </FadeUp>
 
-          <FadeUp className="lg:w-2/3">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {products.map((product, index) => (
-                <div
-                  key={product.title}
-                  className="group relative bg-gradient-to-b from-[#111] to-[#0a0a0a] p-8 border border-amber-500/10 hover:border-amber-500/30 transition-all duration-500"
-                >
-                  {/* Hover glow */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  
-                  {/* Corner accent */}
-                  <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden">
-                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-amber-500/20 to-transparent transform rotate-45 translate-x-8 -translate-y-8"></div>
-                  </div>
-                  
-                  <div className="relative z-10">
-                    <span className={`text-xs font-bold ${product.tierColor} uppercase tracking-[0.2em] mb-4 block`}>
-                      {product.tier}
-                    </span>
-                    <h3 className="font-serif text-2xl text-white mb-3 group-hover:text-amber-200 transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="font-sans font-light text-sm text-amber-100/40 leading-relaxed">
-                      {product.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </FadeUp>
+        {/* Products */}
+        <FadeUp className="text-center mb-12">
+          <h3 className="font-serif text-3xl text-white">Продуктовая Линейка</h3>
+          <p className="text-white/40 mt-2">Бренд — это бизнес-система</p>
+        </FadeUp>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {products.map((product, index) => (
+            <FadeUp key={product.title} delay={index * 0.05}>
+              <div className={`group relative p-6 rounded-2xl border transition-all duration-300 h-full ${
+                product.highlighted 
+                  ? 'bg-gradient-to-b from-amber-500/20 to-amber-600/10 border-amber-500/50 hover:border-amber-400' 
+                  : 'bg-white/[0.02] border-white/10 hover:border-white/30'
+              }`}>
+                <span className={`text-xs font-medium uppercase tracking-[0.15em] mb-3 block ${
+                  product.highlighted ? 'text-amber-400' : 'text-white/40'
+                }`}>
+                  {product.tier}
+                </span>
+                <h4 className="font-serif text-xl text-white mb-2">{product.title}</h4>
+                <p className="font-sans text-sm text-white/40 leading-relaxed mb-4">
+                  {product.description}
+                </p>
+                <p className={`text-sm font-medium ${product.highlighted ? 'text-amber-400' : 'text-white/60'}`}>
+                  {product.price}
+                </p>
+              </div>
+            </FadeUp>
+          ))}
         </div>
+
+        {/* Quote */}
+        <FadeUp className="mt-16 text-center">
+          <div className="inline-block max-w-2xl">
+            <p className="font-serif italic text-2xl text-white/70">
+              «Люди платят большие деньги за состояние, рядом с которым они растут.»
+            </p>
+          </div>
+        </FadeUp>
       </div>
     </section>
   );

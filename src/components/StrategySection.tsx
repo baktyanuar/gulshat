@@ -25,9 +25,10 @@ const strategies = [
     image:
       'https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     items: [
-      'Психология денег: как пробить потолок',
-      'Трансформация личности после 30-40 лет',
-      'Как совмещать бизнес-хватки и женскую легкость',
+      'Психология денег и внутренних ограничений',
+      'Внутренний потолок и зрелые решения',
+      'Трансформация личности после 30–40 лет',
+      'Реализация без надрыва и внутренний баланс',
     ],
   },
   {
@@ -37,7 +38,7 @@ const strategies = [
     borderColor: 'border-beige-800',
     accentColor: 'text-beige-800',
     image:
-      'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
     items: [
       'Честные истории: отношения с сыном, путь к себе',
       'Поиск партнера: критерии и ценности',

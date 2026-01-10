@@ -24,12 +24,14 @@ export function NavigationDark() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-[#0a0a0a]/95 backdrop-blur-md border-b border-amber-500/10"
+          ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-serif text-2xl text-amber-200 tracking-wider">
+        <a href="#" className={`font-serif text-2xl tracking-wider transition-colors ${
+          isScrolled ? 'text-gray-900' : 'text-white'
+        }`}>
           Сауле Шернияз
         </a>
 
@@ -39,17 +41,21 @@ export function NavigationDark() {
             <a
               key={link.href}
               href={link.href}
-              className="font-sans text-xs uppercase tracking-[0.2em] text-amber-100/70 hover:text-amber-400 transition-colors relative group"
+              className={`font-sans text-xs uppercase tracking-[0.15em] transition-colors relative group ${
+                isScrolled ? 'text-gray-600 hover:text-amber-600' : 'text-white/70 hover:text-white'
+              }`}
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+              <span className={`absolute -bottom-1 left-0 w-0 h-px group-hover:w-full transition-all duration-300 ${
+                isScrolled ? 'bg-amber-500' : 'bg-white'
+              }`}></span>
             </a>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-amber-200"
+          className={`md:hidden ${isScrolled ? 'text-gray-900' : 'text-white'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -58,13 +64,13 @@ export function NavigationDark() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#0a0a0a]/98 backdrop-blur-lg border-t border-amber-500/10">
+        <div className="md:hidden bg-white border-t border-gray-100">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="font-sans text-sm uppercase tracking-[0.2em] text-amber-100/70 hover:text-amber-400 transition-colors py-2"
+                className="font-sans text-sm uppercase tracking-[0.15em] text-gray-600 hover:text-amber-600 transition-colors py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

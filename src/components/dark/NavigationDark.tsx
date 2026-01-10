@@ -22,17 +22,15 @@ export function NavigationDark() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+        ? "bg-neu-bg/90 backdrop-blur-md shadow-neu border-b border-white/20"
+        : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className={`font-serif text-2xl tracking-wider transition-colors ${
-          isScrolled ? 'text-gray-900' : 'text-white'
-        }`}>
-          Сауле Шернияз
+        <a href="#" className={`font-serif text-2xl tracking-widest uppercase font-semibold transition-colors ${isScrolled ? 'text-neu-text' : 'text-neu-text'
+          }`}>
+          S. Sherniyaz
         </a>
 
         {/* Desktop Navigation */}
@@ -41,21 +39,19 @@ export function NavigationDark() {
             <a
               key={link.href}
               href={link.href}
-              className={`font-sans text-xs uppercase tracking-[0.15em] transition-colors relative group ${
-                isScrolled ? 'text-gray-600 hover:text-amber-600' : 'text-white/70 hover:text-white'
-              }`}
+              className={`font-sans text-sm font-medium uppercase tracking-[0.15em] transition-all relative group px-4 py-2 rounded-full ${isScrolled
+                ? 'text-neu-text hover:text-neu-accent hover:shadow-neu-pressed'
+                : 'text-neu-text hover:text-neu-accent'
+                }`}
             >
               {link.label}
-              <span className={`absolute -bottom-1 left-0 w-0 h-px group-hover:w-full transition-all duration-300 ${
-                isScrolled ? 'bg-amber-500' : 'bg-white'
-              }`}></span>
             </a>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden ${isScrolled ? 'text-gray-900' : 'text-white'}`}
+          className={`md:hidden p-2 rounded-full transition-all ${isScrolled ? 'text-neu-text hover:shadow-neu' : 'text-neu-text'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -64,13 +60,13 @@ export function NavigationDark() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
+        <div className="md:hidden bg-neu-bg border-t border-white/20 shadow-lg">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="font-sans text-sm uppercase tracking-[0.15em] text-gray-600 hover:text-amber-600 transition-colors py-2"
+                className="font-sans text-sm font-medium uppercase tracking-[0.15em] text-neu-text hover:text-neu-accent transition-colors py-3 px-4 rounded-xl hover:shadow-neu-pressed hover:bg-neu-bg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

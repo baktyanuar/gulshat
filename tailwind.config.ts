@@ -63,10 +63,20 @@ export default {
         sage: {
           DEFAULT: "hsl(var(--sage))",
         },
+        neu: {
+          bg: "#ebf0f7",
+          text: "#2d3748", // Darker (Cool Gray 800) for better readability
+          accent: "#7b95f2",
+        },
+      },
+      boxShadow: {
+        neu: "8px 8px 16px rgb(163,177,198,0.5), -8px -8px 16px rgba(255,255,255, 0.6)", // Softer shadow
+        "neu-pressed": "inset 4px 4px 8px 0 rgba(163,177,198, 0.6), inset -4px -4px 8px 0 rgba(255,255,255, 0.8)",
+        "neu-sm": "4px 4px 8px rgb(163,177,198,0.5), -4px -4px 8px rgba(255,255,255, 0.6)",
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'serif'],
-        sans: ['"Montserrat"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Manrope"', 'sans-serif'],
       },
       letterSpacing: {
         widest: '.2em',

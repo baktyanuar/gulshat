@@ -1,114 +1,70 @@
 import { FadeUp } from '../FadeUp';
-import { Check } from 'lucide-react';
-
-const timeline = [
-  'Придумать идею (для тех, у кого её нет)',
-  'Выбрать нишу и определить аудиторию',
-  'Создать продуктовую линейку',
-  'Запустить первые продажи',
-];
+import { Badge } from '../ui/badge';
 
 const products = [
   {
     tier: 'Low Ticket',
-    title: 'Гайды по Эстетике',
-    description: 'Фэншуй дома, сервировка, расхламление. Легкий вход в воронку.',
-    price: 'от 5 000 ₸',
+    title: 'Гайды',
+    description: 'Феншуй дома, расхламление и порядок дома, легкие ритуалы на денежный успех и изобилие. Легкий вход в воронку',
+    tierColor: 'text-neu-text/50',
   },
   {
     tier: 'Main Product',
     title: 'Курс / Мастер-группа',
     description: 'Мышление, деньги, состояние.',
-    price: 'от 50 000 ₸',
-    highlighted: true,
+    tierColor: 'text-neu-accent',
   },
   {
     tier: 'VIP',
     title: 'Индивидуальное сопровождение',
-    description: 'Личный контакт, глубина и живое поле. Точечная консультационная работа.',
-    price: 'от 300 000 ₸',
+    description: 'Для женщин, которым важен личный контакт, глубина и живое поле. Про мышление, жизненные решения, деньги и внутреннюю устойчивость. Не обучение, точечная личная консультационная работа.',
+    tierColor: 'text-neu-text',
   },
   {
     tier: 'Offline',
     title: 'Женские Встречи',
-    description: 'Бранчи, камерные встречи, трансформационные игры.',
-    price: 'по запросу',
+    description: 'Трансформационные игры, бранчи, камерные встречи для проведения ритуалов, живое поле Сауле.',
+    tierColor: 'text-neu-accent/80',
   },
 ];
 
 export function MonetizationSectionDark() {
   return (
-    <section id="monetization" className="py-24 bg-[#0a0a0a] relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <FadeUp className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Что вы успеете за <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500 underline decoration-amber-500/50 decoration-wavy underline-offset-8">2 недели</span> после покупки
-          </h2>
-          <p className="text-white/50 text-lg mt-6">если изучите материалы интенсива</p>
-        </FadeUp>
-
-        {/* Timeline */}
-        <FadeUp className="mb-24">
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              {/* Line */}
-              <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-amber-500 via-amber-500/50 to-transparent"></div>
-              
-              <div className="space-y-6">
-                {timeline.map((item, index) => (
-                  <div key={index} className="flex items-start gap-6 pl-0">
-                    <div className="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center flex-shrink-0 relative z-10">
-                      <Check className="w-5 h-5 text-amber-400" />
-                    </div>
-                    <div className="pt-3">
-                      <p className="text-white/80 text-lg">{item}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FadeUp>
-
-        {/* Products */}
-        <FadeUp className="text-center mb-12">
-          <h3 className="font-serif text-3xl text-white">Продуктовая Линейка</h3>
-          <p className="text-white/40 mt-2">Бренд — это бизнес-система</p>
-        </FadeUp>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {products.map((product, index) => (
-            <FadeUp key={product.title} delay={index * 0.05}>
-              <div className={`group relative p-6 rounded-2xl border transition-all duration-300 h-full ${
-                product.highlighted 
-                  ? 'bg-gradient-to-b from-amber-500/20 to-amber-600/10 border-amber-500/50 hover:border-amber-400' 
-                  : 'bg-white/[0.02] border-white/10 hover:border-white/30'
-              }`}>
-                <span className={`text-xs font-medium uppercase tracking-[0.15em] mb-3 block ${
-                  product.highlighted ? 'text-amber-400' : 'text-white/40'
-                }`}>
-                  {product.tier}
-                </span>
-                <h4 className="font-serif text-xl text-white mb-2">{product.title}</h4>
-                <p className="font-sans text-sm text-white/40 leading-relaxed mb-4">
-                  {product.description}
-                </p>
-                <p className={`text-sm font-medium ${product.highlighted ? 'text-amber-400' : 'text-white/60'}`}>
-                  {product.price}
-                </p>
-              </div>
-            </FadeUp>
-          ))}
-        </div>
-
-        {/* Quote */}
-        <FadeUp className="mt-16 text-center">
-          <div className="inline-block max-w-2xl">
-            <p className="font-serif italic text-2xl text-white/70">
-              «Люди платят большие деньги за состояние, рядом с которым они растут.»
+    <section id="monetization" className="py-24 bg-neu-bg relative overflow-hidden">
+      <div className="container mx-auto px-6 text-center">
+        <div className="flex flex-col md:flex-row gap-16 items-center">
+          <FadeUp className="md:w-1/3 text-left">
+            <h2 className="font-serif text-4xl text-neu-text mb-6">Продуктовая Линейка</h2>
+            <p className="font-sans font-light text-neu-text/80 mb-8 leading-relaxed">
+              Бренд строится не только ради лайков. Это бизнес-система. Мы продаем не воздух, а
+              трансформацию.
             </p>
-          </div>
-        </FadeUp>
+            <div className="bg-white p-6 rounded-2xl border-l-4 border-neu-accent shadow-neu">
+              <p className="font-serif italic text-lg text-neu-text">
+                «Люди платят большие деньги за состояние, рядом с которым они растут.»
+              </p>
+            </div>
+          </FadeUp>
+
+          <FadeUp className="md:w-2/3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+              {products.map((product) => (
+                <div
+                  key={product.title}
+                  className="bg-white p-8 rounded-2xl shadow-neu hover:shadow-neu-sm transition-all duration-300 border border-white/60 h-full flex flex-col items-start"
+                >
+                  <Badge variant="secondary" className={`mb-4 tracking-widest font-bold uppercase text-xs px-3 py-1 ${product.tierColor} bg-neu-bg border border-white/50`}>
+                    {product.tier}
+                  </Badge>
+                  <h3 className="font-serif text-2xl text-neu-text mb-4">{product.title}</h3>
+                  <p className="font-sans text-base text-neu-text/80 leading-relaxed">
+                    {product.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </FadeUp>
+        </div>
       </div>
     </section>
   );

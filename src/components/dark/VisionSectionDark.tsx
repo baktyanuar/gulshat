@@ -12,61 +12,65 @@ function SpaIcon() {
   );
 }
 
-const cards = [
-  {
-    icon: <Gem className="w-6 h-6" />,
-    title: 'Твердый Бэкграунд',
-    description:
-      'Сауле Шернияз – не просто блогер, а предприниматель с реальным опытом и активами. За её словами стоит прожитая жизнь: бизнес, инвестиции в недвижимость, ответственность за семью и долгосрочные решения.',
-  },
-  {
-    icon: <SpaIcon />,
-    title: 'Мягкая Сила',
-    description:
-      'Психология, коучинг FIA, игропрактика и эзотерика объединены в единую систему. Сауле работает через состояние, в котором изменения происходят естественно.',
-  },
-  {
-    icon: <Eye className="w-6 h-6" />,
-    title: 'Эстетический Интеллект',
-    description:
-      'Эстетика — это язык мышления и способ передачи ценностей. Визуал блога формирует ощущение порядка, вкуса и внутренней культуры.',
-  },
-];
+
 
 export function VisionSectionDark() {
   return (
     <section id="vision" className="py-24 bg-white relative">
       <div className="container mx-auto px-6">
         <FadeUp className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-gray-900">
-            Что такое <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-600 underline decoration-amber-500/30 decoration-wavy underline-offset-8">Quiet Luxury</span>?
+          <span className="text-neu-accent font-sans text-xs tracking-[0.2em] uppercase block mb-3">
+            Фундамент Бренда
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl text-neu-text">
+            Почему Сауле Шернияз?
           </h2>
-          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-full">
-            <span className="text-sm text-gray-500">Фундамент бренда Сауле Шернияз</span>
-          </div>
         </FadeUp>
 
         <FadeUp className="max-w-3xl mx-auto text-center mb-16">
-          <p className="font-sans text-lg text-gray-600 leading-relaxed">
-            Рынок перенасыщен "успешным успехом" и агрессивными продажами. Сауле занимает свободную нишу{' '}
-            <strong className="text-gray-900">Quiet Luxury Mentoring</strong> — мудрость без давления, роскошь без крика, результат через состояние.
+          <p className="font-sans text-lg text-neu-text/80 leading-relaxed">
+            Рынок перенасыщен «успешным успехом», громкими обещаниями и агрессивными продажами. <br />
+            Saule занимает свободную нишу <strong className="text-neu-text">Quiet Luxury Mentoring</strong> — про зрелость, состояние и внутреннюю опору, а не про показную демонстрацию результатов. <br />
+            Это формат влияния, где доверие рождается из личности, а не из шума.
           </p>
         </FadeUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cards.map((card, index) => (
-            <FadeUp key={card.title} delay={index * 0.1}>
-              <div className="group p-8 border border-gray-200 rounded-2xl hover:border-amber-300 hover:shadow-xl transition-all duration-300 bg-white h-full">
-                <div className="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6 text-amber-600 group-hover:bg-amber-100 transition-colors">
-                  {card.icon}
-                </div>
-                <h3 className="font-serif text-2xl mb-3 text-gray-900">{card.title}</h3>
-                <p className="font-sans text-sm text-gray-500 leading-relaxed">
-                  {card.description}
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <FadeUp delay={0}>
+            <div className="group p-8 rounded-2xl shadow-neu hover:shadow-neu-sm transition-all duration-300 bg-white h-full border border-white/60">
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-neu-accent shadow-neu-pressed transition-colors bg-neu-bg">
+                <Gem className="w-6 h-6" />
               </div>
-            </FadeUp>
-          ))}
+              <h3 className="font-serif text-2xl mb-3 text-neu-text">Твердый Бэкграунд</h3>
+              <p className="font-sans text-base text-neu-text/80 leading-relaxed">
+                Сауле Шернияз – не просто блогер, а <strong className="text-neu-text font-medium">предприниматель с реальным опытом и активами</strong>. За её словами стоит прожитая жизнь: <strong className="text-neu-text font-medium">бизнес, инвестиции в недвижимость</strong>, ответственность за семью и долгосрочные решения. Именно поэтому её позиция считывается как устойчивая и вызывает естественное доверие — ей не нужно казаться, она уже есть.
+              </p>
+            </div>
+          </FadeUp>
+
+          <FadeUp delay={0.1}>
+            <div className="group p-8 rounded-2xl shadow-neu hover:shadow-neu-sm transition-all duration-300 bg-white h-full border border-white/60">
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-neu-accent shadow-neu-pressed transition-colors bg-neu-bg">
+                <SpaIcon />
+              </div>
+              <h3 className="font-serif text-2xl mb-3 text-neu-text">Мягкая Сила</h3>
+              <p className="font-sans text-base text-neu-text/80 leading-relaxed">
+                <strong className="text-neu-text">Психология, коучинг FIA, игропрактика и эзотерика</strong> объединены в единую, цельную систему. Сауле Шернияз работает не через давление, а через <strong className="text-neu-text">состояние</strong>, в котором изменения происходят естественно и без внутреннего сопротивления. Игра <strong className="text-neu-text">«Денежный магнит»</strong> в её подходе — не развлечение, а инструмент глубинной работы с мышлением, установками и отношением к деньгам.
+              </p>
+            </div>
+          </FadeUp>
+
+          <FadeUp delay={0.2}>
+            <div className="group p-8 rounded-2xl shadow-neu hover:shadow-neu-sm transition-all duration-300 bg-white h-full border border-white/60">
+              <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-neu-accent shadow-neu-pressed transition-colors bg-neu-bg">
+                <Eye className="w-6 h-6" />
+              </div>
+              <h3 className="font-serif text-2xl mb-3 text-neu-text">Эстетический Интеллект</h3>
+              <p className="font-sans text-base text-neu-text/80 leading-relaxed">
+                Эстетика для Сауле Шернияз — это <strong className="text-neu-text font-medium">язык мышления</strong> и способ передачи ценностей. Визуал блога, стиль жизни, пространство, детали — всё формирует ощущение <strong className="text-neu-text font-medium">порядка, вкуса и внутренней культуры</strong>. Такая подача создаёт доверие и притягивает зрелую, платежеспособную аудиторию, чувствительную к качеству и состоянию.
+              </p>
+            </div>
+          </FadeUp>
         </div>
       </div>
     </section>

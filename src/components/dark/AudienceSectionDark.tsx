@@ -1,80 +1,128 @@
 import { FadeUp } from '../FadeUp';
-import { Globe, Sparkles, Users, BookOpen } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Card, CardContent } from '../ui/card';
+import avatar1 from '@/assets/avatars/avatar1.png';
+import avatar2 from '@/assets/avatars/avatar2.png';
+import avatar3 from '@/assets/avatars/avatar3.png';
+import avatar4 from '@/assets/avatars/avatar4.png';
 
 const audienceSegments = [
   {
-    icon: <Users className="w-5 h-5" />,
+    number: '01',
     title: 'Женщины 30+ в поиске смыслов',
-    description: 'Им важно не «как больше успевать», а как жить в согласии с собой, своими ценностями и реальностью.',
+    description: (
+      <>
+        У них уже закрыты базовые потребности. Им важно не «как больше успевать», а как <strong className="font-medium text-neu-text">жить в согласии с собой</strong>, своими ценностями и реальностью. Они ищут <strong className="font-medium text-neu-text">мотивацию, внутреннюю ясность, опору</strong> и зрелый взгляд на жизнь.
+      </>
+    ),
   },
   {
-    icon: <Sparkles className="w-5 h-5" />,
+    number: '02',
     title: 'Уставшие "Достигаторы"',
-    description: 'Им близка не идея «лёгкости любой ценой», а мудрый баланс между усилием, состоянием и жизнью.',
+    description: (
+      <>
+        Женщины, которые многое умеют, несут ответственность и привыкли справляться сами. Им близка не идея «лёгкости любой ценой», а <strong className="font-medium text-neu-text">мудрый баланс между усилием, состоянием и жизнью</strong>. Они хотят расти – в деньгах, реализации и качестве жизни – <strong className="font-medium text-neu-text">без внутреннего надрыва</strong> и постоянного напряжения.
+      </>
+    ),
   },
   {
-    icon: <Globe className="w-5 h-5" />,
+    number: '03',
     title: 'Эстеты и Визуалы',
-    description: 'Им интересно, как устроена жизнь в деталях: стиль, подача, вкус. Они покупают глазами.',
+    description: (
+      <>
+        Те, кто вдохновляются красотой, порядком и атмосферой. Им интересно, как устроена жизнь в деталях: стиль, подача, вкус. <strong className="font-medium text-neu-text">Они покупают глазами.</strong>
+      </>
+    ),
   },
-  {
-    icon: <BookOpen className="w-5 h-5" />,
-    title: 'Ищущие глубину',
-    description: 'Они ищут мотивацию, внутреннюю ясность, опору и зрелый взгляд на жизнь.',
-  },
+];
+
+const quotes = [
+  '«Мне нравится её состояние и взгляд на жизнь.»',
+  '«Я хочу такую же спокойную, зрелую уверенность.»',
+  '«Я готова платить за окружение, где есть глубина, вкус и статус.»',
 ];
 
 export function AudienceSectionDark() {
   return (
-    <section id="audience" className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="audience" className="py-24 bg-neu-bg relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <FadeUp className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Всё, что вы хотели — можно <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500 underline decoration-amber-500/50 decoration-wavy underline-offset-8">получить</span>
-          </h2>
-          <p className="text-white/50 text-lg mt-6">Целевая аудитория</p>
-        </FadeUp>
+        <div className="flex flex-col md:flex-row items-start gap-16">
+          {/* Left: Header + List */}
+          <FadeUp className="md:w-1/2">
+            <span className="text-neu-accent font-sans text-xs tracking-[0.2em] uppercase block mb-3">
+              Целевая Аудитория
+            </span>
+            <h2 className="font-serif text-4xl md:text-5xl text-neu-text mb-10">
+              Для кого этот блог?
+            </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {audienceSegments.map((segment, index) => (
-            <FadeUp key={segment.title} delay={index * 0.05}>
-              <div className="group p-6 border border-white/10 rounded-xl hover:border-amber-500/50 transition-all duration-300 bg-white/[0.02] hover:bg-white/[0.05] text-center h-full">
-                <div className="w-12 h-12 mx-auto mb-4 border border-white/20 rounded-xl flex items-center justify-center text-white/60 group-hover:text-amber-400 group-hover:border-amber-500/50 transition-colors">
-                  {segment.icon}
-                </div>
-                <h4 className="font-serif text-lg text-white mb-2">{segment.title}</h4>
-                <p className="font-sans text-xs text-white/40 leading-relaxed">{segment.description}</p>
-              </div>
-            </FadeUp>
-          ))}
-        </div>
+            <div className="space-y-6">
+              {audienceSegments.map((segment, index) => (
+                <Card key={segment.number} className="bg-white border-white/60 shadow-neu hover:shadow-neu-sm transition-all duration-300 rounded-2xl">
+                  <CardContent className="p-8 flex items-start gap-6">
+                    <span className="font-serif text-4xl text-neu-text/20 leading-none flex-shrink-0 pt-1">
+                      {segment.number}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-serif text-2xl text-neu-text mb-3">{segment.title}</h4>
+                      <p className="font-sans text-base text-neu-text/80 leading-relaxed">
+                        {segment.description}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </FadeUp>
 
-        {/* Chat-like section */}
-        <FadeUp delay={0.2}>
-          <div className="max-w-2xl mx-auto">
-            <div className="flex flex-col gap-4">
-              {/* User message */}
-              <div className="self-start max-w-sm">
-                <div className="bg-white/10 rounded-2xl rounded-bl-md px-5 py-3">
-                  <p className="text-white/80 text-sm">— Неужели это для меня?!</p>
-                </div>
+          {/* Right: Avatar Card */}
+          <FadeUp className="md:w-1/2" delay={0.2}>
+            <div className="bg-neu-bg p-8 pt-12 relative">
+              {/* Decorative background element behind the avatar section if needed, 
+                   but user asked for white cards. The main container can stay neutral 
+                   to let the white cards pop. */}
+
+              <div className="text-center mb-10">
+                <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-neu-text/70 bg-white/50 inline-block px-4 py-2 rounded-full border border-white/40 backdrop-blur-sm">
+                  Аватар Подписчика
+                </p>
               </div>
-              
-              {/* Bot response */}
-              <div className="self-end max-w-md">
-                <div className="bg-gradient-to-r from-amber-500/20 to-amber-600/20 border border-amber-500/30 rounded-2xl rounded-br-md px-6 py-5">
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    — Да! Если вы узнали себя в этих описаниях — бренд Сауле создан для вас. Здесь нет давления, только состояние ✨
-                  </p>
-                  <div className="mt-4 pt-4 border-t border-amber-500/20">
-                    <p className="text-amber-400 text-xs font-medium">@saulesherniyaz</p>
-                    <p className="text-white/40 text-xs mt-1">Quiet Luxury Mentoring</p>
-                  </div>
-                </div>
+
+              <div className="space-y-4 font-serif text-lg text-neu-text/80 italic mb-10">
+                {quotes.map((quote, idx) => (
+                  <Card key={idx} className="bg-white border-white/60 shadow-neu-sm transform hover:scale-[1.02] transition-transform duration-300">
+                    <CardContent className="p-6 text-center">
+                      <p>{quote}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="flex justify-center items-center -space-x-4 pb-4">
+                <Avatar className="w-14 h-14 border-2 border-white z-0 shadow-lg ring-2 ring-white/20">
+                  <AvatarImage src={avatar1} className="object-cover" />
+                  <AvatarFallback>U1</AvatarFallback>
+                </Avatar>
+                <Avatar className="w-14 h-14 border-2 border-white z-10 shadow-lg ring-2 ring-white/20">
+                  <AvatarImage src={avatar2} className="object-cover" />
+                  <AvatarFallback>U2</AvatarFallback>
+                </Avatar>
+                <Avatar className="w-14 h-14 border-2 border-white z-20 shadow-lg ring-2 ring-white/20">
+                  <AvatarImage src={avatar3} className="object-cover" />
+                  <AvatarFallback>U3</AvatarFallback>
+                </Avatar>
+                <Avatar className="w-14 h-14 border-2 border-white z-30 shadow-lg ring-2 ring-white/20">
+                  <AvatarImage src={avatar4} className="object-cover" />
+                  <AvatarFallback>U4</AvatarFallback>
+                </Avatar>
+                <Avatar className="w-14 h-14 border-2 border-white z-40 shadow-lg ring-2 ring-white/20 bg-neu-accent flex items-center justify-center">
+                  <AvatarImage src="" />
+                  <AvatarFallback className="bg-neu-accent text-white font-sans text-xs font-bold">TK</AvatarFallback>
+                </Avatar>
               </div>
             </div>
-          </div>
-        </FadeUp>
+          </FadeUp>
+        </div>
       </div>
     </section>
   );

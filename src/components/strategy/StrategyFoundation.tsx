@@ -47,8 +47,8 @@ export function StrategyFoundation() {
                             <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 mb-8">
                                 <Heart size={32} />
                             </div>
-                            <h3 className="text-2xl font-bold mb-4">Прожитый Путь</h3>
-                            <p className="text-gray-500 leading-relaxed">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Прожитый Путь</h3>
+                            <p className="text-gray-600 text-base leading-relaxed">
                                 За словами Гульшат стоит реальная история: потеря мамы в 5 лет,
                                 преодоление кризисов, работа с психологами, трансформация в 36-38 лет.
                                 Её слова <strong>откликаются</strong> — она говорит из опыта.
@@ -61,8 +61,8 @@ export function StrategyFoundation() {
                             <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 mb-8">
                                 <Zap size={32} />
                             </div>
-                            <h3 className="text-2xl font-bold mb-4">Энергия & Харизма</h3>
-                            <p className="text-gray-500 leading-relaxed">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Энергия & Харизма</h3>
+                            <p className="text-gray-600 text-base leading-relaxed">
                                 Главная внутренняя сила — это <strong>энергия</strong>.
                                 Гульшат работает через состояние, а не через давление.
                                 Игра «Денежный Магнит» — инструмент глубинной работы с мышлением,
@@ -76,8 +76,8 @@ export function StrategyFoundation() {
                             <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 mb-8">
                                 <Sparkles size={32} />
                             </div>
-                            <h3 className="text-2xl font-bold mb-4">Естественность</h3>
-                            <p className="text-gray-500 leading-relaxed">
+                            <h3 className="text-xl md:text-2xl font-bold mb-4">Естественность</h3>
+                            <p className="text-gray-600 text-base leading-relaxed">
                                 Роль: <strong>Наставник + Подруга</strong>. Никаких жёстких продаж,
                                 инфоцыганства или показной духовности.
                                 Вдохновение образом жизни, проживание пути вместе с аудиторией.

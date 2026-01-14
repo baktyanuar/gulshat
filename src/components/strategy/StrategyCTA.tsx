@@ -26,7 +26,10 @@ export function StrategyCTA() {
 
                 {/* Footer */}
                 <footer className="mt-24 pt-12 border-t border-white/10 text-gray-500 text-sm">
-                    <p>© 2026 Гульшат Абдимурат. Бренд-стратегия.</p>
+                    <p>© 2026 Гульшат Абдимурат</p>
+                    <a href="https://www.instagram.com/ayana.nurgali_/" target="_blank" rel="noopener noreferrer" className="mt-2 text-emerald-500/60 font-medium hover:text-emerald-400 transition-colors inline-block">
+                        Personal Brand Strategy by Ayana Nurgali
+                    </a>
                 </footer>
             </div>
         </section>

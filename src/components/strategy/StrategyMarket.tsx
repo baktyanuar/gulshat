@@ -38,10 +38,10 @@ export function StrategyMarket() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
                     {marketStats.map((stat, i) => (
                         <FadeUp key={i} delay={i * 0.1}>
-                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-[2rem] text-center">
-                                <p className="text-gray-500 mb-2">{stat.label}</p>
+                            <div className="bg-gray-50 border border-gray-100 p-8 rounded-[2rem] text-center h-full flex flex-col justify-center">
+                                <p className="text-gray-500 font-medium mb-2">{stat.label}</p>
                                 <p className="text-5xl md:text-6xl font-bold text-emerald-600 mb-4">{stat.value}</p>
-                                <p className="text-sm text-gray-400">{stat.desc}</p>
+                                <p className="text-sm text-gray-400 leading-snug">{stat.desc}</p>
                             </div>
                         </FadeUp>
                     ))}
@@ -91,7 +91,7 @@ export function StrategyMarket() {
                                             </div>
                                             <span className="font-bold text-gray-900 text-lg">{item.name}</span>
                                         </div>
-                                        <div className="pl-12 text-sm text-gray-500">
+                                        <div className="pl-12 text-base text-gray-600 leading-relaxed">
                                             {item.desc}
                                         </div>
                                     </div>

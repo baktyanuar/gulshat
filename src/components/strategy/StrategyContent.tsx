@@ -64,8 +64,8 @@ export function StrategyContent() {
                                 <p className="text-sm text-gray-400 uppercase tracking-wider mb-4">О чём писать:</p>
                                 <ul className="space-y-3">
                                     {pillar.topics.map((topic, j) => (
-                                        <li key={j} className="flex items-start gap-3 text-gray-600">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                                        <li key={j} className="flex items-start gap-3 text-gray-700 text-base leading-relaxed">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2.5 shrink-0" />
                                             {topic}
                                         </li>
                                     ))}

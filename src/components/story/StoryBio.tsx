@@ -20,7 +20,7 @@ export function StoryBio() {
                     <FadeUp delay={0.2}>
                         <span className="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-4 block">Обо мне</span>
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
-                            Путь к себе через <span className="text-emerald-600">принятие</span>
+                            Путь к себе через <span className="text-emerald-600">любовь</span>
                         </h2>
                         <div className="prose prose-lg text-gray-600 leading-relaxed space-y-6">
                             <p>
@@ -29,11 +29,7 @@ export function StoryBio() {
                                 Они и есть мой клан, моя опора.
                             </p>
                             <p>
-                                В 34 года я пережила предательство близкого человека — тёти. Полгода я была на дне:
-                                материально, физически, морально. Казалось, выхода нет.
-                            </p>
-                            <p>
-                                Но в 36-38 лет начался мой главный рост. Работа с психологами перевернула всё.
+                                В 36-38 лет начался мой главный рост. Работа с психологами перевернула всё.
                                 Я начала понимать себя, стала рациональнее, появилась <strong>любовь к себе</strong>.
                                 Я осознала: меня можно любить просто так.
                             </p>

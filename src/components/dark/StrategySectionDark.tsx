@@ -7,7 +7,7 @@ export function StrategySectionDark() {
       <div className="container mx-auto px-6">
         <FadeUp className="text-center mb-16">
           <h2 className="heading-section text-white mb-6">
-            Вектор Роста <span className="text-purple-400">&</span> Мечты
+            Вектор Роста <span className="text-emerald-400">&</span> Мечты
           </h2>
           <p className="text-gray-400">К чему я иду прямо сейчас.</p>
         </FadeUp>
@@ -15,7 +15,7 @@ export function StrategySectionDark() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <FadeUp delay={0.1}>
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl h-full hover:bg-white/10 transition-colors">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center text-purple-400 mb-6">
+              <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400 mb-6">
                 <Target size={24} />
               </div>
               <h3 className="text-xl font-bold mb-4">Самореализация</h3>
@@ -29,7 +29,7 @@ export function StrategySectionDark() {
 
           <FadeUp delay={0.2}>
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl h-full hover:bg-white/10 transition-colors">
-              <div className="w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 mb-6">
+              <div className="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center text-teal-400 mb-6">
                 <Sparkles size={24} />
               </div>
               <h3 className="text-xl font-bold mb-4">Самопознание</h3>
@@ -43,7 +43,7 @@ export function StrategySectionDark() {
 
           <FadeUp delay={0.3}>
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl h-full hover:bg-white/10 transition-colors">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 mb-6">
+              <div className="w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center text-sky-400 mb-6">
                 <Heart size={24} />
               </div>
               <h3 className="text-xl font-bold mb-4">Тело и Здоровье</h3>

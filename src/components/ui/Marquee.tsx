@@ -15,7 +15,7 @@ export const Marquee = ({ items, direction = 'left', speed = 20, className = "" 
             >
                 {[...items, ...items, ...items, ...items].map((item, index) => (
                     <div key={index} className="mx-8 flex items-center gap-4">
-                        <span className="text-2xl md:text-4xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 opacity-80">
+                        <span className="text-2xl md:text-4xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 opacity-80">
                             {item}
                         </span>
                         <span className="text-white/20 text-2xl">✦</span>

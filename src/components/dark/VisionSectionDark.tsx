@@ -6,7 +6,7 @@ const balanceWheel = [
   {
     icon: Users,
     title: "Семья",
-    desc: "Большая семья — братья, дяди, снохи, дети. Маму потеряла в 5 лет, с папой прохладно. Моя семья — это мой клан.",
+    desc: "Большая семья — братья, дяди, снохи, дети. Маму потеряла в 5 лет, с папой прохладно. Отношений пока нет.",
     color: "bg-blue-50 text-blue-600"
   },
   {
@@ -19,31 +19,31 @@ const balanceWheel = [
     icon: Coffee,
     title: "Хобби",
     desc: "Движение по городу, посиделки в кофейнях, тусовки, танцы, решать вопросы. Нравится быть занятой.",
-    color: "bg-pink-50 text-pink-600"
+    color: "bg-emerald-50 text-emerald-600"
   },
   {
     icon: Dumbbell,
     title: "Тело",
     desc: "Телом довольна, но хочу сбросить 5 кг. Понимаю, что спорт нужен с возрастом.",
-    color: "bg-green-50 text-green-600"
+    color: "bg-teal-50 text-teal-600"
   },
   {
     icon: Star,
     title: "Духовность",
     desc: "Ислам, вера в Аллаха. Есть вопросы, на которые ищу ответы, не всегда согласна с глубоко верующими.",
-    color: "bg-purple-50 text-purple-600"
+    color: "bg-sky-50 text-sky-600"
   },
   {
     icon: Wallet,
     title: "Капитал",
     desc: "Есть квартира и авто. Доход от аренды и семейного бизнеса. Хочу масштаба в медийности.",
-    color: "bg-indigo-50 text-indigo-600"
+    color: "bg-lime-50 text-lime-600"
   },
   {
     icon: Globe,
     title: "Яркость",
     desc: "Путешествия, экскурсии, большие компании, семейные сборы. Наслаждаюсь моментом.",
-    color: "bg-orange-50 text-orange-600"
+    color: "bg-cyan-50 text-cyan-600"
   }
 ];
 
@@ -75,11 +75,11 @@ export function VisionSectionDark() {
 
           <div className="lg:w-2/3">
             <FadeUp>
-              <span className="text-purple-600 font-bold uppercase tracking-widest text-xs mb-4 block">
+              <span className="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-4 block">
                 Identity & Life
               </span>
               <h2 className="heading-section text-gray-900 mb-8">
-                Личность и <span className="text-transparent bg-clip-text bg-gradient-purple">Жизнь.</span>
+                Личность и <span className="text-transparent bg-clip-text bg-gradient-emerald">Жизнь.</span>
               </h2>
 
               <div className="prose prose-lg text-gray-500 mb-12">
@@ -102,7 +102,7 @@ export function VisionSectionDark() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {balanceWheel.map((item, index) => (
                   <FadeUp key={index} delay={index * 0.1}>
-                    <div className="group card-lara p-6 md:p-8 flex items-start gap-4 hover:border-purple-200 transition-colors">
+                    <div className="group card-lara p-6 md:p-8 flex items-start gap-4 hover:border-emerald-200 transition-colors">
                       <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${item.color}`}>
                         <item.icon className="w-6 h-6" />
                       </div>

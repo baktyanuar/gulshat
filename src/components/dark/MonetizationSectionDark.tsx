@@ -6,7 +6,7 @@ export function MonetizationSectionDark() {
     <section id="path" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         <FadeUp className="mb-16 max-w-3xl">
-          <span className="text-purple-600 font-bold uppercase tracking-widest text-xs mb-4 block">
+          <span className="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-4 block">
             Expertise
           </span>
           <h2 className="heading-section text-gray-900 mb-6">
@@ -20,7 +20,7 @@ export function MonetizationSectionDark() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
           <FadeUp delay={0.1}>
             <div className="card-lara h-full bg-white relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-100 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-100 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110" />
               <h3 className="text-2xl font-bold mb-6 relative z-10">Трансформация</h3>
               <p className="text-gray-600 mb-6 leading-relaxed relative z-10">
                 В какой-то момент я прошла игру <strong>«Денежный Магнит»</strong> у подруги (автора игры).
@@ -35,7 +35,7 @@ export function MonetizationSectionDark() {
           </FadeUp>
 
           <FadeUp delay={0.2}>
-            <div className="card-lara h-full bg-gradient-purple text-white relative overflow-hidden">
+            <div className="card-lara h-full bg-gradient-emerald text-white relative overflow-hidden">
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
               <h3 className="text-2xl font-bold mb-6">Почему "Денежный Магнит"?</h3>
               <p className="text-white/90 mb-8 leading-relaxed">
@@ -62,7 +62,7 @@ export function MonetizationSectionDark() {
 
         {/* Product / Offer */}
         <FadeUp>
-          <div className="card-lara bg-white border-2 border-purple-100 text-center">
+          <div className="card-lara bg-white border-2 border-emerald-100 text-center">
             <div>
               <h3 className="text-3xl font-bold mb-2">Игропрактик «Денежный Магнит»</h3>
               <p className="text-gray-500">Основной продукт: Трансформация мышления через игру.</p>

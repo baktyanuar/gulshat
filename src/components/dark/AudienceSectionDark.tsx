@@ -14,7 +14,7 @@ export function AudienceSectionDark() {
             </h2>
             <div className="space-y-8">
               <div className="flex gap-4">
-                <div className="w-1 bg-purple-500 h-auto rounded-full" />
+                <div className="w-1 bg-emerald-500 h-auto rounded-full" />
                 <div>
                   <h4 className="font-bold text-lg mb-2">Большая Миссия</h4>
                   <p className="text-gray-600">
@@ -23,7 +23,7 @@ export function AudienceSectionDark() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="w-1 bg-pink-500 h-auto rounded-full" />
+                <div className="w-1 bg-teal-500 h-auto rounded-full" />
                 <div>
                   <h4 className="font-bold text-lg mb-2">Что мотивирует?</h4>
                   <p className="text-gray-600">
@@ -69,21 +69,21 @@ export function AudienceSectionDark() {
         <FadeUp className="mt-24">
           <h2 className="heading-section text-center mb-12">Люди и Ценности</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="card-lara bg-purple-50 border-none text-center">
+            <div className="card-lara bg-emerald-50 border-none text-center">
               <h3 className="font-bold text-xl mb-4">Ценю в людях</h3>
-              <p className="text-gray-600">Честность. Отзывчивость. Отношение ко мне. Ум. Справедливость. Искренность.</p>
+              <p className="text-gray-600">Честность, Отзывчивость, Отношение ко мне, Ум, Справедливость, Искренность. Нравятся открытые, добрые, амбициозные.</p>
             </div>
-            <div className="card-lara bg-pink-50 border-none text-center">
+            <div className="card-lara bg-teal-50 border-none text-center">
               <h3 className="font-bold text-xl mb-4">Мужчина рядом</h3>
-              <p className="text-gray-600">Добрый, Амбициозный, Целеустремленный, Щедрый, Открытый, Не надменный.</p>
+              <p className="text-gray-600">Добрый, Амбициозный, Целеустремленный, Умеет зарабатывать, Щедрый, Открытый, Честный, Справедливый, Не надменный, Не эгоист.</p>
             </div>
-            <div className="card-lara bg-blue-50 border-none text-center">
+            <div className="card-lara bg-sky-50 border-none text-center">
               <h3 className="font-bold text-xl mb-4">Вдохновение</h3>
               <p className="text-gray-600 text-sm mb-4">
-                Раньше: Дана Есеева (многозадачность). <br />
-                Смотрю: Лейла, Луина, Регина, Медик Смит, Оксукбаева, Баян.
+                Раньше: Дана Есеева (многозадачная, бизнес, много детей, невестка, жена, друг, умеет отдыхать). <br />
+                Сейчас: Лейла, Луина, Регина, Медик Смит, Оксукбаева, Айым, Баян.
               </p>
-              <span className="text-xs bg-white px-2 py-1 rounded-md text-gray-400">Блогеры / Лайфстайл / Бизнес</span>
+              <span className="text-xs bg-white px-2 py-1 rounded-md text-gray-400">Лайфстайл / Семья / Бизнес</span>
             </div>
           </div>
         </FadeUp>

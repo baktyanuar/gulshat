@@ -9,13 +9,13 @@ import { Marquee } from '@/components/ui/Marquee';
 
 const IndexDark = () => {
   return (
-    <div className="min-h-screen bg-white text-foreground selection:bg-purple-200">
+    <div className="min-h-screen bg-white text-foreground selection:bg-emerald-200">
       <div className="noise" />
       <NavigationDark />
       <HeroSectionDark />
 
       <Marquee
-        items={["Денежный Магнит", "Энергия", "Изобилие", "Любовь", "Трансформация"]}
+        items={["Энергия", "Изобилие", "Любовь", "Трансформация"]}
         speed={30}
         className="rotate-[-2deg] scale-105 border-y-4 border-white z-20 relative -mt-10 mb-10"
       />

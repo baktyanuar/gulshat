@@ -84,12 +84,12 @@
   }
 
   /* Smooth gradients */
-  .bg-gradient-purple {
-    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  .bg-gradient-emerald {
+    background: linear-gradient(135deg, #047857 0%, #0d9488 100%);
   }
 
-  .text-gradient-purple {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600;
+  .text-gradient-emerald {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500;
   }
 
   /* Card styles matching reference */

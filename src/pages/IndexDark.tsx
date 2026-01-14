@@ -5,16 +5,34 @@ import { AudienceSectionDark } from '@/components/dark/AudienceSectionDark';
 import { StrategySectionDark } from '@/components/dark/StrategySectionDark';
 import { MonetizationSectionDark } from '@/components/dark/MonetizationSectionDark';
 import { FooterDark } from '@/components/dark/FooterDark';
+import { Marquee } from '@/components/ui/Marquee';
 
 const IndexDark = () => {
   return (
-    <div className="min-h-screen bg-neu-bg text-neu-text">
+    <div className="min-h-screen bg-white text-foreground selection:bg-purple-200">
+      <div className="noise" />
       <NavigationDark />
       <HeroSectionDark />
+
+      <Marquee
+        items={["Денежный Магнит", "Энергия", "Изобилие", "Любовь", "Трансформация"]}
+        speed={30}
+        className="rotate-[-2deg] scale-105 border-y-4 border-white z-20 relative -mt-10 mb-10"
+      />
+
       <VisionSectionDark />
-      <AudienceSectionDark />
+      <div className="py-12" />
       <StrategySectionDark />
+
+      <Marquee
+        items={["Женственность", "Баланс", "Роскошь", "Уверенность", "Счастье"]}
+        direction="right"
+        speed={35}
+        className="rotate-[1deg] scale-105 border-y-4 border-white z-20"
+      />
+
       <MonetizationSectionDark />
+      <AudienceSectionDark />
       <FooterDark />
     </div>
   );

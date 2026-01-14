@@ -1,80 +1,78 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
-const navLinks = [
-  { href: "#vision", label: "Видение" },
-  { href: "#audience", label: "Аудитория" },
-  { href: "#strategy", label: "Стратегия" },
-  { href: "#monetization", label: "Монетизация" },
-];
-
-export function NavigationDark() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+export const NavigationDark = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: "Обо мне", href: "#about" },
+    { name: "Мой Путь", href: "#path" },
+    { name: "Ценности", href: "#values" },
+    { name: "Мечты", href: "#dreams" },
+  ];
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-        ? "bg-neu-bg/90 backdrop-blur-md shadow-neu border-b border-white/20"
-        : "bg-transparent"
-        }`}
+      className={cn(
+        "fixed w-full z-50 transition-all duration-300",
+        scrolled ? "bg-white/80 backdrop-blur-md border-b border-gray-100 py-4" : "bg-transparent py-6"
+      )}
     >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className={`font-serif text-2xl tracking-widest uppercase font-semibold transition-colors ${isScrolled ? 'text-neu-text' : 'text-neu-text'
-          }`}>
-          S. Sherniyaz
-        </a>
+      <div className="container mx-auto px-6">
+        <div className="flex justify-between items-center">
+          <a href="#" className="text-xl font-bold tracking-tight text-white mix-blend-difference">
+            GULSHAT ABDIMURAT
+          </a>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`font-sans text-sm font-medium uppercase tracking-[0.15em] transition-all relative group px-4 py-2 rounded-full ${isScrolled
-                ? 'text-neu-text hover:text-neu-accent hover:shadow-neu-pressed'
-                : 'text-neu-text hover:text-neu-accent'
-                }`}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className={`md:hidden p-2 rounded-full transition-all ${isScrolled ? 'text-neu-text hover:shadow-neu' : 'text-neu-text'}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-neu-bg border-t border-white/20 shadow-lg">
-          <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.name}
                 href={link.href}
-                className="font-sans text-sm font-medium uppercase tracking-[0.15em] text-neu-text hover:text-neu-accent transition-colors py-3 px-4 rounded-xl hover:shadow-neu-pressed hover:bg-neu-bg"
-                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-sm font-medium text-white/90 hover:text-white transition-colors mix-blend-difference uppercase tracking-wide"
               >
-                {link.label}
+                {link.name}
               </a>
             ))}
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white mix-blend-difference"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 p-6 flex flex-col space-y-6 animate-in slide-in-from-top-5 shadow-xl">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-lg font-medium text-gray-900 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       )}
     </nav>
   );
-}
+};

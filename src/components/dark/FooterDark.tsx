@@ -2,32 +2,21 @@ import { FadeUp } from '../FadeUp';
 
 export function FooterDark() {
   return (
-    <footer className="bg-neu-bg text-neu-text py-24 relative border-t border-white/40">
+    <footer className="bg-black text-white py-20 rounded-t-[3rem] mt-12">
       <div className="container mx-auto px-6 text-center">
         <FadeUp>
-          <h2 className="font-serif text-4xl md:text-6xl mb-8">
-            Готовы создавать{' '}
-            <span className="text-neu-accent italic">
-              легенду?
-            </span>
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
+            Живи. Люби. Вдохновляй.
           </h2>
-
-          <p className="font-sans text-lg text-neu-text/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            У Сауле есть всё: фактура, внешность, опыт и мудрость. Осталось только грамотно это
-            подсветить. Это бренд на миллионы.
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg">
+            Моя цель — помочь тебе найти свой путь к изобилию и любви к себе через игру и личный пример.
           </p>
-
-
-
-          <div className="mt-20 pt-10 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <span className="font-sans text-xs text-neu-text/50 tracking-[0.1em] uppercase">
-              Saule Sherniyaz © 2026
-            </span>
-            <span className="font-sans text-xs text-neu-text/50 tracking-[0.1em] uppercase">
-              Personal Brand Strategy by Ayana Nurgali
-            </span>
-          </div>
         </FadeUp>
+
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+          <p>© 2026 Gulshat Abdimurat. Все права защищены.</p>
+          <p className="mt-2 md:mt-0">Almaty, Kazakhstan</p>
+        </div>
       </div>
     </footer>
   );

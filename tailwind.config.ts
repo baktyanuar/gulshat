@@ -47,40 +47,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        beige: {
-          50: "hsl(var(--beige-50))",
-          100: "hsl(var(--beige-100))",
-          200: "hsl(var(--beige-200))",
-          300: "hsl(var(--beige-300))",
-          800: "hsl(var(--beige-800))",
-          900: "hsl(var(--beige-900))",
-        },
-        gold: {
-          light: "hsl(var(--gold-light))",
-          DEFAULT: "hsl(var(--gold))",
-          dark: "hsl(var(--gold-dark))",
-        },
-        sage: {
-          DEFAULT: "hsl(var(--sage))",
-        },
-        neu: {
-          bg: "#ebf0f7",
-          text: "#2d3748", // Darker (Cool Gray 800) for better readability
-          accent: "#7b95f2",
-        },
-      },
-      boxShadow: {
-        neu: "8px 8px 16px rgb(163,177,198,0.5), -8px -8px 16px rgba(255,255,255, 0.6)", // Softer shadow
-        "neu-pressed": "inset 4px 4px 8px 0 rgba(163,177,198, 0.6), inset -4px -4px 8px 0 rgba(255,255,255, 0.8)",
-        "neu-sm": "4px 4px 8px rgb(163,177,198,0.5), -4px -4px 8px rgba(255,255,255, 0.6)",
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'serif'],
-        sans: ['"Manrope"', 'sans-serif'],
-      },
-      letterSpacing: {
-        widest: '.2em',
-        ultra: '.3em',
+        sans: ['"Inter"', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -96,20 +65,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "pulse-slow": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.5" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 1s ease-out forwards",
-        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
       },
     },
   },

@@ -1,57 +1,59 @@
 import { FadeUp } from "../FadeUp";
-import saulePortrait from "@/assets/saule-portrait.png";
+import photographer from "@/assets/Image_202601141440.jpeg";
 
 export function HeroSectionDark() {
   return (
-    <header className="relative min-h-screen flex flex-col md:flex-row bg-neu-bg overflow-hidden">
-      {/* Left Content */}
-      <div className="w-full md:w-1/2 flex items-start justify-center p-6 md:p-16 relative z-10 pt-32 md:pt-40">
-        <FadeUp className="text-center md:text-left max-w-lg">
-          <div className="inline-flex items-center gap-3 mb-8">
-            <span className="text-xs font-sans text-neu-accent uppercase tracking-[0.3em] font-medium">
-              Личный Бренд & Стратегия
+    <header className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-20">
+
+      {/* Background Image/Photo - Full Screen or Centered */}
+      <div className="absolute inset-0 opacity-60">
+        <img
+          src={photographer}
+          className="w-full h-full object-cover object-top"
+          alt="Gulshat Abdimurat"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10 text-center">
+        <FadeUp>
+          {/* Pill Label */}
+          <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+            <span className="text-sm font-semibold text-white uppercase tracking-widest">
+              Игропрактик • Наставник • Личность
             </span>
           </div>
 
-          <h1 className="font-serif text-5xl md:text-7xl leading-[1.1] text-neu-text mb-8">
-            Мудрость. <br />
-            <span className="text-neu-accent italic">
-              Роскошь.
-            </span> <br />
-            Баланс.
+          <h1 className="heading-hero text-white mb-6 leading-tight">
+            Энергия. <br />
+            Харизма. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Проявленность.
+            </span>
           </h1>
 
-          <p className="font-sans text-lg text-neu-text/90 leading-relaxed mb-12">
-            Почему этот бренд обречён на успех? Потому что он объединяет <strong className="font-medium text-neu-text">зрелый жизненный путь</strong>, <strong className="font-medium text-neu-text">предпринимательское мышление</strong> и <strong className="font-medium text-neu-text">тонкое чувствование</strong>. Это бренд женщины, у которой есть <strong className="font-medium text-neu-text">опора, вкус и внутренний баланс</strong>. Это то, что сейчас ищет каждая современная женщина.
+          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-light mb-10">
+            Я учусь любить себя и наслаждаться моментом. <br />
+            Помогаю людям через игру <strong>«Денежный Магнит»</strong>.
           </p>
 
-          <a
-            href="#strategy"
-            className="inline-flex items-center gap-4 px-8 py-4 bg-neu-bg text-neu-accent font-sans text-sm font-bold uppercase tracking-[0.15em] border border-white/40 transition-all duration-300 rounded-full shadow-neu hover:shadow-neu-pressed hover:scale-[0.98] active:scale-95"
-          >
-            Смотреть Стратегию
-          </a>
-        </FadeUp>
-      </div>
-
-      {/* Right Content - Full Screen Image */}
-      <div className="w-full md:w-1/2 h-[50vh] md:h-screen relative">
-        <FadeUp delay={0.2} className="h-full w-full">
-          <div className="absolute inset-0 bg-neu-bg/10 z-10 md:hidden"></div> {/* Overlay for mobile text readability if needed, though text is above */}
-          <img
-            src={saulePortrait}
-            className="w-full h-full object-cover object-top"
-            alt="Saule Sherniyaz"
-          />
-
-          {/* Quote Card - Positioned over image */}
-          <div className="absolute bottom-8 left-8 right-8 md:right-auto md:max-w-xs bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-white/40 z-20 hidden md:block">
-            <p className="font-serif italic text-lg text-neu-text">
-              «Не кричащий успех, а тихое достоинство»
-            </p>
-            <p className="text-xs font-sans text-neu-accent mt-3 uppercase tracking-[0.15em] font-medium">
-              Основной месседж
-            </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Ценность</p>
+              <p className="text-white font-bold">Женственность</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Миссия</p>
+              <p className="text-white font-bold">Благотворительность</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Экспертность</p>
+              <p className="text-white font-bold">Психология денег</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Стиль</p>
+              <p className="text-white font-bold">Quiet Luxury</p>
+            </div>
           </div>
         </FadeUp>
       </div>

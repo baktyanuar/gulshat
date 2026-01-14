@@ -48,7 +48,7 @@ export function StrategyContent() {
                     <span className="text-emerald-600 font-bold uppercase tracking-widest text-xs mb-4 block">Контент-Стратегия</span>
                     <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">Три Кита Контента</h2>
                     <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-                        Из брифа: готова показывать <strong>чувства, личную жизнь, размышления, работу, путь</strong>.
+                        Транслируем <strong>чувства, личную жизнь, размышления, работу, путь</strong>.
                     </p>
                 </FadeUp>
 

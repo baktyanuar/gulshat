@@ -52,7 +52,7 @@ export function StrategyAudience() {
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5" />
 
                         <h3 className="text-2xl font-bold mb-4 relative z-10">Что люди хотят чувствовать</h3>
-                        <p className="text-emerald-200 mb-10 relative z-10">Из брифа: «Желание быть как я, вдохновение, мотивацию, тепло, женственность»</p>
+                        <p className="text-emerald-200 mb-10 relative z-10">«Желание быть как я, вдохновение, мотивацию, тепло, женственность»</p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                             {quotes.map((quote, i) => (
